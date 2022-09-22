@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 import java.util.Date;
@@ -31,6 +28,10 @@ public class Tarefa {
         this.dataLimite = dataLimite;
         this.dataCriacao = dataCriacao;
         this.dataAtualizacao = dataAtualizacao;
+    }
+    
+    public Tarefa(){
+        this.dataCriacao = new Date();
     }
 
     public int getId() {

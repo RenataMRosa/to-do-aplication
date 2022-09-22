@@ -1,11 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -34,6 +33,35 @@ public class Conexao {
         } catch (Exception e) {
             throw new RuntimeException("Erro ao fechar a conexão com o banco de dados");
         }
-    }    
+    }
+
+    public static void closeConnection(Connection conexao, PreparedStatement statement){
+        try {
+            if(conexao != null)
+                conexao.close();
+            
+            if (statement != null)
+                statement.close();
+            
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao fechar a conexão com o banco de dados");
+        }
+    }   
+    
+    public static void closeConnection(Connection conexao, PreparedStatement statement, ResultSet resultSet){
+        try {
+            if(conexao != null)
+                conexao.close();
+            
+            if(statement != null)
+                statement.close();
+            
+            if(resultSet != null)
+                resultSet.close();
+            
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao fechar a conexão com o banco de dados");
+        }
+    } 
     
 }
