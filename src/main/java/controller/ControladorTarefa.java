@@ -17,12 +17,12 @@ import util.Conexao;
 public class ControladorTarefa {
     
     public void salvar(Tarefa tarefa){
-        String sql = "INSERT INTO tarefas(idProjetos,"
+        String sql = "INSERT INTO tarefas(idProjeto,"
                 + "nome,"
                 + "descricao,"
                 + "completada,"
                 + "notas,"
-                + "dataLimite"
+                + "dataLimite,"
                 + "dataCriacao,"
                 + "dataAtualizacao)"
                 + "VALUES(?,?,?,?,?,?,?,?)";
@@ -50,15 +50,14 @@ public class ControladorTarefa {
     }
     
     public void atualizar (Tarefa tarefa){
-        String sql = "UPDATE tarefas SET"
-                + "idProjeto = ?"
-                + "nome = ?"
-                + "descricao = ?"
-                + "completada = ?"
-                + "notas = ?"
-                + "dataLimite = ?"
-                + "dataCriacao = ?"
-                + "dataAtualizacao = ?"
+        String sql = "UPDATE tarefas SET idProjeto = ?, "
+                + "nome = ?, "
+                + "descricao = ?, "
+                + "completada = ?, "
+                + "notas = ?, "
+                + "dataLimite = ?, "
+                + "dataCriacao = ?, "
+                + "dataAtualizacao = ? "
                 + "WHERE id = ?";
         
         Connection c = null;
@@ -66,7 +65,7 @@ public class ControladorTarefa {
         
         try {
             c = Conexao.getConexao();
-            ps = c.prepareCall(sql);
+            ps = c.prepareStatement(sql);
             ps.setInt(1, tarefa.getIdProjeto());
             ps.setString(2, tarefa.getNome());
             ps.setString(3, tarefa.getDescricao());
@@ -85,7 +84,7 @@ public class ControladorTarefa {
     }
     
     public void deletar (int idTarefa){
-        String sql = "DELETE FROM tarefas WHERE id = ? ";
+        String sql = "DELETE FROM tarefas WHERE id = ?";
         
         Connection c = null;
         PreparedStatement ps = null;
@@ -102,7 +101,7 @@ public class ControladorTarefa {
         }
     }
     
-    public List<Tarefa> listaTarefas (int idProjeto){
+    public List<Tarefa> listarTarefas (int idProjeto){
         String sql ="SELECT * FROM tarefas WHERE idProjeto = ?";
         
         Connection c = null;

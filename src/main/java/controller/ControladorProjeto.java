@@ -42,19 +42,19 @@ public class ControladorProjeto {
     }
     
     public void atualizar (Projeto projeto){
-        String sql = "UPDATE projetos SET"
-                + "nome = ?"
-                + "descricao = ?"
-                + "dataCriacao = ?"
+        String sql = "UPDATE projetos SET "
+                + "nome = ?, "
+                + "descricao = ?, "
+                + "dataCriacao = ?, "
                 + "dataAtualizacao = ?"
                 + "WHERE id = ?";
-        
+
         Connection c = null;
         PreparedStatement ps = null;
         
         try {
             c = Conexao.getConexao();
-            ps = c.prepareCall(sql);
+            ps = c.prepareStatement(sql);
             ps.setString(1, projeto.getNome());
             ps.setString(2, projeto.getDescricao());
             ps.setDate(3, (new Date(projeto.getDataCriacao().getTime())));
@@ -62,7 +62,7 @@ public class ControladorProjeto {
             ps.setInt(5, projeto.getId());
             ps.execute();
         } catch (Exception e) {
-            throw new RuntimeException ("Erro ao atualizar o projeto" + e.getMessage(), e);
+            throw new RuntimeException ("Erro ao atualizar o projeto", e);
         } finally {
             Conexao.closeConnection(c, ps);
         }
@@ -86,7 +86,7 @@ public class ControladorProjeto {
         }
     }
     
-    public List<Projeto> listaProjetos (){
+    public List<Projeto> listarProjetos (){
         String sql ="SELECT * FROM projetos";
         
         Connection c = null;

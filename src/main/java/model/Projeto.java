@@ -24,6 +24,8 @@ public class Projeto {
     
     public Projeto(){
         this.dataCriacao = new Date();
+        this.dataAtualizacao = new Date();
+
     }
 
     public int getId() {

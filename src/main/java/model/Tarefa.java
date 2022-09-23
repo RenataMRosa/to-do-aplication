@@ -31,7 +31,9 @@ public class Tarefa {
     }
     
     public Tarefa(){
+        this.completada = false;
         this.dataCriacao = new Date();
+        this.dataAtualizacao = new Date();
     }
 
     public int getId() {
