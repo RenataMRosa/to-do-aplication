@@ -1,9 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
+import java.awt.Color;
+import java.awt.Font;
 /**
  *
  * @author renata
@@ -15,6 +14,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
+        decoracaoTabelaTarefa();
     }
 
     /**
@@ -26,6 +26,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelListaVazia = new javax.swing.JPanel();
+        jLabelListaVaziaIcone = new javax.swing.JLabel();
+        jLabelListaVaziaTitulo = new javax.swing.JLabel();
+        jLabelListaVaziaSubtitulo = new javax.swing.JLabel();
         jPanelCabecalho = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jLabelSubtitulo = new javax.swing.JLabel();
@@ -39,141 +43,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jScrollPaneProjetos = new javax.swing.JScrollPane();
         jListProjetos = new javax.swing.JList<>();
         jPanel5 = new javax.swing.JPanel();
-        jPanelListaVazia = new javax.swing.JPanel();
-        jLabelListaVaziaIcone = new javax.swing.JLabel();
-        jLabelListaVaziaTitulo = new javax.swing.JLabel();
-        jLabelListaVaziaSubtitulo = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 800));
-
-        jPanelCabecalho.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelCabecalho.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 204, 255), new java.awt.Color(255, 255, 255)));
-
-        jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N
-        jLabelTitulo.setText(" ToDo ");
-
-        jLabelSubtitulo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelSubtitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelSubtitulo.setText("Anote tudo, não esqueça de nada!");
-
-        javax.swing.GroupLayout jPanelCabecalhoLayout = new javax.swing.GroupLayout(jPanelCabecalho);
-        jPanelCabecalho.setLayout(jPanelCabecalhoLayout);
-        jPanelCabecalhoLayout.setHorizontalGroup(
-            jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelSubtitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabelTitulo)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanelCabecalhoLayout.setVerticalGroup(
-            jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabelTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelSubtitulo)
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        jPanelProjetos.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelProjetos.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
-
-        jLabelProjetosTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelProjetosTitulo.setForeground(new java.awt.Color(153, 204, 255));
-        jLabelProjetosTitulo.setText("Projetos");
-
-        jLabelProjetosAdiciona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mais.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelProjetosLayout = new javax.swing.GroupLayout(jPanelProjetos);
-        jPanelProjetos.setLayout(jPanelProjetosLayout);
-        jPanelProjetosLayout.setHorizontalGroup(
-            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProjetosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelProjetosTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                .addComponent(jLabelProjetosAdiciona)
-                .addGap(15, 15, 15))
-        );
-        jPanelProjetosLayout.setVerticalGroup(
-            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProjetosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelProjetosTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelProjetosAdiciona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        jPanelTarefas.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelTarefas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jLabelTarefasTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelTarefasTitulo.setForeground(new java.awt.Color(153, 204, 255));
-        jLabelTarefasTitulo.setText("Tarefas");
-
-        jLabelTarefasAdiciona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mais.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelTarefasLayout = new javax.swing.GroupLayout(jPanelTarefas);
-        jPanelTarefas.setLayout(jPanelTarefasLayout);
-        jPanelTarefasLayout.setHorizontalGroup(
-            jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTarefasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelTarefasTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelTarefasAdiciona)
-                .addGap(16, 16, 16))
-        );
-        jPanelTarefasLayout.setVerticalGroup(
-            jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTarefasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelTarefasTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(jLabelTarefasAdiciona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        jPanelListaProjetos.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelListaProjetos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jScrollPaneProjetos.setBorder(null);
-
-        jListProjetos.setBorder(null);
-        jListProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jListProjetos.setForeground(new java.awt.Color(71, 71, 71));
-        jListProjetos.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jListProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jListProjetos.setFixedCellHeight(50);
-        jListProjetos.setSelectionBackground(new java.awt.Color(153, 204, 255));
-        jListProjetos.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jScrollPaneProjetos.setViewportView(jListProjetos);
-
-        javax.swing.GroupLayout jPanelListaProjetosLayout = new javax.swing.GroupLayout(jPanelListaProjetos);
-        jPanelListaProjetos.setLayout(jPanelListaProjetosLayout);
-        jPanelListaProjetosLayout.setHorizontalGroup(
-            jPanelListaProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPaneProjetos)
-        );
-        jPanelListaProjetosLayout.setVerticalGroup(
-            jPanelListaProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPaneProjetos)
-        );
-
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jScrollPaneTarefa = new javax.swing.JScrollPane();
+        jTableTarefa = new javax.swing.JTable();
 
         jPanelListaVazia.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -217,36 +88,212 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGap(65, 65, 65))
         );
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(600, 800));
+
+        jPanelCabecalho.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelCabecalho.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 204, 255), new java.awt.Color(255, 255, 255)));
+
+        jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N
+        jLabelTitulo.setText(" ToDo ");
+
+        jLabelSubtitulo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelSubtitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSubtitulo.setText("A vida começa onde sua zona de conforto termina!");
+
+        javax.swing.GroupLayout jPanelCabecalhoLayout = new javax.swing.GroupLayout(jPanelCabecalho);
+        jPanelCabecalho.setLayout(jPanelCabecalhoLayout);
+        jPanelCabecalhoLayout.setHorizontalGroup(
+            jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelSubtitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabelTitulo)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanelCabecalhoLayout.setVerticalGroup(
+            jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabelTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelSubtitulo)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanelProjetos.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelProjetos.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
+
+        jLabelProjetosTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelProjetosTitulo.setForeground(new java.awt.Color(153, 204, 255));
+        jLabelProjetosTitulo.setText("Projetos");
+
+        jLabelProjetosAdiciona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mais.png"))); // NOI18N
+        jLabelProjetosAdiciona.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProjetosAdicionaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelProjetosLayout = new javax.swing.GroupLayout(jPanelProjetos);
+        jPanelProjetos.setLayout(jPanelProjetosLayout);
+        jPanelProjetosLayout.setHorizontalGroup(
+            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProjetosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelProjetosTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addComponent(jLabelProjetosAdiciona)
+                .addGap(15, 15, 15))
+        );
+        jPanelProjetosLayout.setVerticalGroup(
+            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProjetosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelProjetosTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelProjetosAdiciona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jPanelTarefas.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelTarefas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelTarefasTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelTarefasTitulo.setForeground(new java.awt.Color(153, 204, 255));
+        jLabelTarefasTitulo.setText("Tarefas");
+
+        jLabelTarefasAdiciona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mais.png"))); // NOI18N
+        jLabelTarefasAdiciona.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTarefasAdicionaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelTarefasLayout = new javax.swing.GroupLayout(jPanelTarefas);
+        jPanelTarefas.setLayout(jPanelTarefasLayout);
+        jPanelTarefasLayout.setHorizontalGroup(
+            jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTarefasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelTarefasTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelTarefasAdiciona)
+                .addGap(16, 16, 16))
+        );
+        jPanelTarefasLayout.setVerticalGroup(
+            jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTarefasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelTarefasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelTarefasTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jLabelTarefasAdiciona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jPanelListaProjetos.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelListaProjetos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jScrollPaneProjetos.setBorder(null);
+
+        jListProjetos.setBorder(null);
+        jListProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jListProjetos.setForeground(new java.awt.Color(91, 91, 91));
+        jListProjetos.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jListProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jListProjetos.setFixedCellHeight(50);
+        jListProjetos.setFocusable(false);
+        jListProjetos.setSelectionBackground(new java.awt.Color(188, 221, 255));
+        jListProjetos.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        jScrollPaneProjetos.setViewportView(jListProjetos);
+
+        javax.swing.GroupLayout jPanelListaProjetosLayout = new javax.swing.GroupLayout(jPanelListaProjetos);
+        jPanelListaProjetos.setLayout(jPanelListaProjetosLayout);
+        jPanelListaProjetosLayout.setHorizontalGroup(
+            jPanelListaProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPaneProjetos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+        );
+        jPanelListaProjetosLayout.setVerticalGroup(
+            jPanelListaProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPaneProjetos)
+        );
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jTableTarefa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTableTarefa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nome", "Descrição", "Prazo", "Tarefa Concluída"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableTarefa.setFocusable(false);
+        jTableTarefa.setGridColor(new java.awt.Color(255, 255, 255));
+        jTableTarefa.setRowHeight(40);
+        jTableTarefa.setSelectionBackground(new java.awt.Color(245, 245, 245));
+        jTableTarefa.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jTableTarefa.setShowGrid(false);
+        jTableTarefa.setShowHorizontalLines(true);
+        jScrollPaneTarefa.setViewportView(jTableTarefa);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jPanelListaVazia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jScrollPaneTarefa, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelListaVazia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jScrollPaneTarefa)
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanelListaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanelProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanelListaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanelTarefas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jPanelTarefas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addComponent(jPanelCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,6 +313,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabelProjetosAdicionaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjetosAdicionaMouseClicked
+        TelaProjeto telaProjeto = new TelaProjeto(this, rootPaneCheckingEnabled);
+        telaProjeto.setVisible(true);
+        
+       
+    }//GEN-LAST:event_jLabelProjetosAdicionaMouseClicked
+
+    private void jLabelTarefasAdicionaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTarefasAdicionaMouseClicked
+        TelaTarefa telaTarefa = new TelaTarefa(this, rootPaneCheckingEnabled);
+      //  telaTarefa.setProjeto(null);
+        telaTarefa.setVisible(true);
+    }//GEN-LAST:event_jLabelTarefasAdicionaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -277,7 +337,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Java swing".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -300,6 +360,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelListaVaziaIcone;
@@ -319,5 +380,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelProjetos;
     private javax.swing.JPanel jPanelTarefas;
     private javax.swing.JScrollPane jScrollPaneProjetos;
+    private javax.swing.JScrollPane jScrollPaneTarefa;
+    private javax.swing.JTable jTableTarefa;
     // End of variables declaration//GEN-END:variables
+
+    public void decoracaoTabelaTarefa(){
+        jTableTarefa.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
+        jTableTarefa.getTableHeader().setBackground(new Color(188,221,255));
+        jTableTarefa.getTableHeader().setForeground(new Color(255,255,255));
+        jTableTarefa.setAutoCreateRowSorter(true);
+    }
 }
